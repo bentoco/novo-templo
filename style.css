@@ -1,0 +1,104 @@
+body {
+    /* background-color: brown; */
+    background-color: #acacac;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%230e2300' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2362aa4a' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23252e00' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%2399932f' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23423600' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b57a3c' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23633b00' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ba6758' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23873b17' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23a95e74' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23aa3838' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23885f83' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+html a {
+    color: #fff;
+}
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-style: normal;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 2fr 2fr auto;
+}
+
+#header {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #0011f7;
+    place-self: center;
+    border-radius: 5px;
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 100px;
+    height: auto;
+    animation: rotate-logo 4s linear infinite; */
+}
+
+#header a {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.doom-body {
+    background-color: red !important;
+}
+
+.heaven-body {
+    background-color: #00f7f1;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+}
+
+.middle-column {
+    position: relative;
+}
+
+.middle-column p {
+    padding: 1em;
+    bottom: 0;
+    animation: animate-text 5s ease-in-out forwards, remove-opacity 5s;
+    text-align: justify;
+    line-height: 20px;
+    font-style: normal;
+    margin-bottom: 10em;
+    color: #fff;
+    background-color: rgb(0% 12% 98% / 0.64);
+    border-radius: 5px;
+}
+
+@keyframes animate-text {
+    from {
+        margin-top: 200%;
+        bottom: calc(-100% - 100px);
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 10%;
+        bottom: calc(100% - 100px);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate-logo {
+    from {
+        /* Initial rotation angle */
+        transform: rotate(0deg);
+    }
+
+    to {
+        /* Final rotation angle */
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 600px) {}
