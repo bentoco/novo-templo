@@ -1,0 +1,36 @@
+body {
+    font-family: "Press Start 2P", system-ui;
+    font-style: normal;
+    text-align: center;
+}
+
+html a {
+    color: #fff;
+}
+
+#player-name-window {
+    display: block;
+}
+
+#player-name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#range-window {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#player-name-input {
+    height: 10%;
+}
+
+.range-input {
+    width: 150px;
+    padding: 5px;
+}
