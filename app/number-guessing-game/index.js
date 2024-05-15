@@ -2,8 +2,8 @@ let playerName = "";
 let range = 0;
 
 function startGame() {
-  player_name = document.getElementById("player-name-input").value.trim();
-  if (player_name === "") {
+  playerName = document.getElementById("player-name-input").value.trim();
+  if (playerName === "") {
     alert("please enter your name.");
     return;
   }
