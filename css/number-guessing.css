@@ -34,3 +34,7 @@ html a {
     width: 150px;
     padding: 5px;
 }
+
+#game-window {
+    display: none;
+}

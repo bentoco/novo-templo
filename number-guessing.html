@@ -23,7 +23,7 @@
     </div>
 
     <div id="range-window">
-        <h1><span id="player-name"></span>,</h1>
+        <p><span id="player-name"></span>,</p>
       <label for="lower-input">enter the range: </label>
       <input
         type="number"
@@ -39,6 +39,10 @@
         placeholder="upper bound"
       />
       <button onclick="submitRange()">submit</button>
+    </div>
+    <div id="game-window">
+      <h1>Guess the number in the range</h1>
+      <p>You have <span id="attempts-value"></span> attemps.</p>
     </div>
     <script src="./app/number-guessing-game/index.js"></script>
   </body>

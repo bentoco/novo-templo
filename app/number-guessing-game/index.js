@@ -1,27 +1,47 @@
 let playerName = "";
-let range = 0;
+let lowerBound = 0;
+let upperBound = 0;
+let attempts = 0;
 
 function startGame() {
-  player_name = document.getElementById("player-name-input").value.trim();
-  if (player_name === "") {
+  playerName = document.getElementById("player-name-input").value.trim();
+  if (playerName === "") {
     alert("please enter your name.");
     return;
   }
-  document.getElementById('player-name').textContent = playerName;
+  document.getElementById("player-name").textContent = playerName;
   document.getElementById("player-name-window").style.display = "none";
   document.getElementById("range-window").style.display = "flex";
   document.getElementById("lower-input").focus();
 }
 
 function submitRange() {
-  const lowerBound = document.getElementById("lower-input").value;
-  const upperBound = document.getElementById("upper-input").value;
+  lowerBound = document.getElementById("lower-input").value;
+  upperBound = document.getElementById("upper-input").value;
 
   if (lowerBound === "" || upperBound === "") {
     alert("Please enter both lower and upper bounds.");
     return;
   }
 
+  if (lowerBound >= upperBound) {
+    alert("Please upper bound range should be greater than lower bound.");
+    return;
+  }
+
   console.log(`Lower Bound: ${lowerBound}, Upper Bound: ${upperBound}`);
-  // You can perform further actions with the bounds here
+
+  document.getElementById("range-window").style.display = "none";
+  document.getElementById("game-window").style.display = "flex";
+  attempts = log2OfRange(lowerBound, upperBound);
+  document.getElementById("attempts-value").textContent = attempts;
+}
+
+function log2OfRange(lower, upper) {
+  if (lower > upper) {
+    console.error("Lower bound must be less than or equal to upper bound");
+    return;
+  }
+  let range = upper - lower + 1;
+  return Math.round(Math.log2(range));
 }
