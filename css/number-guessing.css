@@ -2,39 +2,116 @@ body {
     font-family: "Press Start 2P", system-ui;
     font-style: normal;
     text-align: center;
+    color: white;
 }
 
 html a {
     color: #fff;
 }
 
-#player-name-window {
-    display: block;
+h1 {
+    margin: 0 0 20px 0;
+    font-size: 1.5em;
 }
 
-#player-name-container {
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+        "header     header  header"
+        "left-aside content right-aside"
+        "footer     footer  footer";
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #4CAF50;
+}
+
+.left-aside {
+    grid-area: left-aside;
+    background-color: #2196F3;
+}
+
+.right-aside {
+    grid-area: right-aside;
+    background-color: #2196F3;
+}
+
+.content {
+    grid-area: content;
+    background-color: #FF5722;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    flex-direction: column;
 }
 
-#range-window {
+.footer {
+    grid-area: footer;
+    background-color: #795548;
+}
+
+.grid-container>div {
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.content>div {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#range-container {
     display: none;
-    justify-content: center;
+    flex-direction: column;
+}
+
+
+#attempts-container {
+    display: none;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
     align-items: center;
     gap: 10px;
 }
 
+.input-container p {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.input-container input {
+    flex-grow: 1;
+}
+
+.input-container button {
+    white-space: nowrap;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #e4c515;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.input-container button:hover {
+    background-color: #0056b3;
+}
+
+/* inputs */
 #player-name-input {
     height: 10%;
-}
-
-.range-input {
-    width: 150px;
-    padding: 5px;
-}
-
-#game-window {
-    display: none;
 }

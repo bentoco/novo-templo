@@ -10,8 +10,8 @@ function startGame() {
     return;
   }
   document.getElementById("player-name").textContent = playerName;
-  document.getElementById("player-name-window").style.display = "none";
-  document.getElementById("range-window").style.display = "flex";
+  document.getElementById("player-name-container").style.display = "none";
+  document.getElementById("range-container").style.display = "flex";
   document.getElementById("lower-input").focus();
 }
 
@@ -31,8 +31,8 @@ function submitRange() {
 
   console.log(`Lower Bound: ${lowerBound}, Upper Bound: ${upperBound}`);
 
-  document.getElementById("range-window").style.display = "none";
-  document.getElementById("game-window").style.display = "flex";
+  document.getElementById("range-container").style.display = "none";
+  document.getElementById("attempts-container").style.display = "flex";
   attempts = log2OfRange(lowerBound, upperBound);
   document.getElementById("attempts-value").textContent = attempts;
 }

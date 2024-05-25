@@ -13,36 +13,40 @@
     <title>guess the number</title>
   </head>
   <body>
-    <div id="player-name-window">
-      <h1>welcome to the number guessing name!</h1>
-      <div id="player-name-container">
-        <p>please enter your name:</p>
-        <input type="text" id="player-name-input" />
-        <button onclick="startGame()">confirm</button>
+    <div class="grid-container">
+      <div class="header"></div>
+      <div class="left-aside"></div>
+      <div class="content">
+        <div id="player-name-container">
+          <h1>welcome to the number guessing name</h1>
+          <div class="input-container">
+            <p>please enter your name:</p>
+            <input type="text" id="player-name-input" />
+            <button onclick="startGame()">confirm</button>
+          </div>
+        </div>
+        <div id="range-container">
+          <h1>hello <span id="player-name"></span> :D</h1>
+          <div class="input-container">
+            <label for="lower-input">enter the range: </label>
+            <input type="number" id="lower-input" />
+            <span>to</span>
+            <input type="number" id="upper-input" />
+            <button onclick="submitRange()">submit</button>
+          </div>
+        </div>
+        <div id="attempts-container">
+          <h1>guess the number in the range</h1>
+          <p>You have <span id="attempts-value"></span> attemps.</p>
+          <div class="input-container">
+            <label for="guess-value">guess a number: </label>
+            <input type="number" id="guess-value">
+            <button onclick="submitGuess()">submit</button>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div id="range-window">
-        <p><span id="player-name"></span>,</p>
-      <label for="lower-input">enter the range: </label>
-      <input
-        type="number"
-        id="lower-input"
-        class="range-input"
-        placeholder="lower bound"
-      />
-      <span>to</span>
-      <input
-        type="number"
-        id="upper-input"
-        class="range-input"
-        placeholder="upper bound"
-      />
-      <button onclick="submitRange()">submit</button>
-    </div>
-    <div id="game-window">
-      <h1>Guess the number in the range</h1>
-      <p>You have <span id="attempts-value"></span> attemps.</p>
+      <div class="right-aside"></div>
+      <div class="footer"></div>
     </div>
     <script src="./app/number-guessing-game/index.js"></script>
   </body>
